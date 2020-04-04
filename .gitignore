@@ -1,4 +1,4 @@
 build
-node_module
+node_modules
 .idea/vcs.xml
 .idea/workspace.xml
