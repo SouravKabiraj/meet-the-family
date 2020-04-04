@@ -1,6 +1,7 @@
 import {Father, Gender, Human, Man, MarriedMan, MarriedWoman, Mother} from "./internal";
 import {ManBuilder} from "./Builders/ManBuilder";
 import {WomanBuilder} from "./Builders/WomanBuilder";
+import {EntityNotFound} from "./Error/EntityNotFound";
 
 export class FamilyFacade {
     private king: Human;
@@ -17,7 +18,11 @@ export class FamilyFacade {
     }
 
     public search(name: string): Human {
-        return this.members.get(name);
+        const searchedPerson = this.members.get(name);
+        if (!searchedPerson) {
+            throw new EntityNotFound()
+        }
+        return searchedPerson;
     }
 
     public getGenderOf(name: string): Gender {

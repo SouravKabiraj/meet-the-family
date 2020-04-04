@@ -1,5 +1,5 @@
 import {LengaburuEmperorFamilyFacadeBuilder} from "./InitialDataSetup/FamilyFacadeBuilder";
-import {FamilyCommand, FamilyTreeCommandInterface, RelationshipCommand} from "./CommandInterface/FamilyTreeCommandInterface";
+import {FamilyTreeCommandInterface} from "./CommandInterface/FamilyTreeCommandInterface";
 import {BrotherInLawRelation} from "./RelationshipHandlers/BrotherInLawRelation";
 import {MaternalAuntRelation} from "./RelationshipHandlers/MaternalAuntRelation";
 import {MaternalUncleRelation} from "./RelationshipHandlers/MaternalUncleRelation";
@@ -9,6 +9,8 @@ import {SiblingsRelation} from "./RelationshipHandlers/SiblingsRelation";
 import {SisterInLawRelation} from "./RelationshipHandlers/SisterInLawRelation";
 import {SonRelation} from "./RelationshipHandlers/SonRelation";
 import {DaughterRelation} from "./RelationshipHandlers/DaughterRelation";
+import {FamilyCommand} from "./Command/FamilyCommand";
+import {RelationshipCommand} from "./Command/RelationshipCommand";
 
 export class Test {
     public static execute(): void {

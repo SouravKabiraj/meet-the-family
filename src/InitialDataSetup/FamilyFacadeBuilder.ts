@@ -1,4 +1,4 @@
-import {FamilyFacade} from "../MeetTheFamily.facade";
+import {FamilyFacade} from "../MeetTheFamilyFacade";
 import {Gender, Man, Woman} from "../internal";
 import {ManBuilder} from "../Builders/ManBuilder";
 import {WomanBuilder} from "../Builders/WomanBuilder";
