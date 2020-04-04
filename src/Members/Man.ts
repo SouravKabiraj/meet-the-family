@@ -23,7 +23,6 @@ export class Man extends Human implements IMan {
                 }
             });
         } catch (e) {
-            console.log('No Mother Found!');
         }
         return newMe;
     }

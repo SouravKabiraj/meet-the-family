@@ -23,7 +23,6 @@ export class MarriedMan extends Man implements IMarriedMan {
                 }
             });
         } catch (e) {
-            console.log('Dont Have Mother!');
         }
         return newMe;
     }

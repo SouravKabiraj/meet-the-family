@@ -15,7 +15,7 @@ export class MarriedWoman extends Woman implements IMarriedWoman {
 
     giveBirth(child: Human): { father: Father, mother: Mother, child: Human } {
         let partner = <MarriedMan>this.getPartner();
-        if (typeof partner !== Father.constructor.name)
+        if (partner.constructor.name !== Father.name)
             partner = partner.beFather();
         const newMe = this.beMother();
         newMe.setPartner(partner);
@@ -36,7 +36,6 @@ export class MarriedWoman extends Woman implements IMarriedWoman {
                 }
             });
         } catch (e) {
-            console.log('Dont Have Mother!');
         }
         return newMe;
     }

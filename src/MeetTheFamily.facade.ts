@@ -11,7 +11,7 @@ export class FamilyFacade {
     }
 
     coronation(kingName: string): void {
-        const king = ManBuilder.withDefault().withName('King').build();
+        const king = ManBuilder.withDefault().withName(kingName).build();
         this.members.set(kingName, king);
         this.king = king;
     }
@@ -20,10 +20,14 @@ export class FamilyFacade {
         return this.members.get(name);
     }
 
+    public getGenderOf(name: string): Gender {
+        return this.search(name).gender;
+    }
+
     public organizeMarriage(familyMemberName: string, newMember: Human): void {
         const familyMember = this.search(familyMemberName);
         let newCouple: { husband: MarriedMan, wife: MarriedWoman };
-        if (typeof newMember === Man.constructor.name) {
+        if (newMember.constructor.name === Man.name) {
             newCouple = (<Man>newMember).marry(familyMember);
         } else {
             newCouple = (<Man>familyMember).marry(newMember);

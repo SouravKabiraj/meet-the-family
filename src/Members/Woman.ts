@@ -15,7 +15,6 @@ export class Woman extends Human {
                 }
             });
         } catch (e) {
-            console.log('No Mother Found!');
         }
         return newMe;
     }
