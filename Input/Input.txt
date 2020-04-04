@@ -1,0 +1,3 @@
+ADD_CHILD Vritha Srutak Male
+GET_RELATIONSHIP Chit Son
+ADD_CHILD Dritha Srutaki Male

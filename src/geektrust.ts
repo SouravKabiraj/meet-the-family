@@ -1,7 +1,20 @@
 import {Test} from "./Test";
 
-console.log('started..');
-const filename = process.argv[2];
-// console.log(filename);
+const fs = require('fs');
 
-Test.execute();
+
+class MeetMyFamily {
+    public static async main() {
+        const filename = process.argv[3];
+        const contents = await fs.readFileSync(filename, {encoding: 'utf8'})
+        const formattedCommands = [];
+        const commandLines = contents.split('\n');
+        commandLines.forEach(commandLine => {
+            formattedCommands.push(commandLine.split(' '));
+        });
+        const outputs = Test.execute(formattedCommands).toString().replace(/\,/g, "\n");
+        await fs.writeFileSync('./Output/Output.txt', outputs);
+    }
+}
+
+MeetMyFamily.main();

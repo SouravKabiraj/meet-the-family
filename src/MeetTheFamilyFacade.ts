@@ -2,6 +2,7 @@ import {Father, Gender, Human, Man, MarriedMan, MarriedWoman, Mother} from "./in
 import {ManBuilder} from "./Builders/ManBuilder";
 import {WomanBuilder} from "./Builders/WomanBuilder";
 import {EntityNotFound} from "./Error/EntityNotFound";
+import {InValidActionError} from "./Error/InValidActionError";
 
 export class FamilyFacade {
     private king: Human;
@@ -44,13 +45,17 @@ export class FamilyFacade {
 
     // Add Child but with better name ;)
     public namingCeremony(mothersName: string, newBornName: string, gender: Gender): void {
-        const newBorn = gender === Gender.MALE ?
-            ManBuilder.withDefault().withName(newBornName).build() :
-            WomanBuilder.withDefault().withName(newBornName).build();
-        const familyMember = <MarriedWoman>this.members.get(mothersName);
-        const giveBirthResponse: { father: Father, mother: Mother, child: Human } = familyMember.giveBirth(newBorn);
-        this.members.set(giveBirthResponse.child.getFullName(), giveBirthResponse.child);
-        this.members.set(giveBirthResponse.mother.getFullName(), giveBirthResponse.mother);
-        this.members.set(giveBirthResponse.father.getFullName(), giveBirthResponse.father);
+        try {
+            const newBorn = gender === Gender.MALE ?
+                ManBuilder.withDefault().withName(newBornName).build() :
+                WomanBuilder.withDefault().withName(newBornName).build();
+            const familyMember = <MarriedWoman>this.members.get(mothersName);
+            const giveBirthResponse: { father: Father, mother: Mother, child: Human } = familyMember.giveBirth(newBorn);
+            this.members.set(giveBirthResponse.child.getFullName(), giveBirthResponse.child);
+            this.members.set(giveBirthResponse.mother.getFullName(), giveBirthResponse.mother);
+            this.members.set(giveBirthResponse.father.getFullName(), giveBirthResponse.father);
+        } catch (e) {
+            throw new InValidActionError();
+        }
     }
 }

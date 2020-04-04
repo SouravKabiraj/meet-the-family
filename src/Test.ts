@@ -13,7 +13,7 @@ import {FamilyCommand} from "./Command/FamilyCommand";
 import {RelationshipCommand} from "./Command/RelationshipCommand";
 
 export class Test {
-    public static execute(): void {
+    public static execute(commands: string[][]): string[] {
         const familyFacade = LengaburuEmperorFamilyFacadeBuilder.withInitialData().build();
         const sonRelation = new SonRelation();
         const siblingsRelation = new SiblingsRelation();
@@ -36,6 +36,10 @@ export class Test {
             daughterRelation
         );
 
-        console.log(familyTreeCommandInterface.Execute(FamilyCommand.GET_RELATIONSHIP, 'Amba', RelationshipCommand.SisterInLaw));
+        const outputs = [];
+        commands.forEach(command => {
+            outputs.push(familyTreeCommandInterface.Execute(...command));
+        });
+        return outputs;
     }
 }
