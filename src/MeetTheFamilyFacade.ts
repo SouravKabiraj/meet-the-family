@@ -11,6 +11,7 @@ export class FamilyFacade {
         this.members = new Map<string, Human>();
     }
 
+    // Create King but with better name ;P
     coronation(kingName: string): void {
         const king = ManBuilder.withDefault().withName(kingName).build();
         this.members.set(kingName, king);
@@ -41,6 +42,7 @@ export class FamilyFacade {
         this.members.set(newCouple.wife.getFullName(), newCouple.wife);
     }
 
+    // Add Child but with better name ;)
     public namingCeremony(mothersName: string, newBornName: string, gender: Gender): void {
         const newBorn = gender === Gender.MALE ?
             ManBuilder.withDefault().withName(newBornName).build() :

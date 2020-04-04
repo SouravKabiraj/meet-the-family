@@ -10,16 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c89349c4-f886-49f3-9407-fb170a69d52a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Command/FamilyCommand.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Command/RelationshipCommand.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Error/EntityNotFound.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Error/InValidActionError.ts" afterDir="false" />
+    <list default="true" id="c89349c4-f886-49f3-9407-fb170a69d52a" name="Default Changelist" comment="#007 | Sourav | Handled all Not found and invalid action error.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CommandInterface/FamilyTreeCommandInterface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandInterface/FamilyTreeCommandInterface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InitialDataSetup/FamilyFacadeBuilder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/InitialDataSetup/FamilyFacadeBuilder.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MeetTheFamily.facade.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/MeetTheFamilyFacade.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MeetTheFamilyFacade.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/MeetTheFamilyFacade.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +133,7 @@
       <workItem from="1585810034107" duration="3815000" />
       <workItem from="1585823150073" duration="28286000" />
       <workItem from="1585941555835" duration="22720000" />
-      <workItem from="1586016362321" duration="8216000" />
+      <workItem from="1586016362321" duration="8584000" />
     </task>
     <task id="LOCAL-00001" summary="#001 | Sourav | Added git ignore file.">
       <created>1585995713572</created>
@@ -191,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586028547061</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="#007 | Sourav | Handled all Not found and invalid action error.">
+      <created>1586030127045</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1586030127045</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +216,8 @@
     <MESSAGE value="#004 | Sourav | Created initial setup." />
     <MESSAGE value="#005 | Sourav | Introduced command interface." />
     <MESSAGE value="#006 | Sourav | Introduced command interface. [Code Fix]" />
-    <option name="LAST_COMMIT_MESSAGE" value="#006 | Sourav | Introduced command interface. [Code Fix]" />
+    <MESSAGE value="#007 | Sourav | Handled all Not found and invalid action error." />
+    <option name="LAST_COMMIT_MESSAGE" value="#007 | Sourav | Handled all Not found and invalid action error." />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="355" width="600" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586005513480">
@@ -231,18 +232,18 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="728" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1585916833502" />
-    <state x="789" y="54" width="961" height="878" key="CommitChangelistDialog2" timestamp="1586028546980">
+    <state x="789" y="54" width="961" height="878" key="CommitChangelistDialog2" timestamp="1586030216034">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="789" y="54" width="961" height="878" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586028546980" />
+    <state x="789" y="54" width="961" height="878" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586030216034" />
     <state width="1106" height="506" key="DebuggerActiveHint" timestamp="1586027325326">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1106" height="506" key="DebuggerActiveHint/70.27.1850.1053@70.27.1850.1053" timestamp="1586027325326" />
-    <state x="240" y="124" width="1480" height="879" key="DiffContextDialog" timestamp="1586028526224">
+    <state x="240" y="124" width="1480" height="879" key="DiffContextDialog" timestamp="1586030212405">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="240" y="124" width="1480" height="879" key="DiffContextDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586028526224" />
+    <state x="240" y="124" width="1480" height="879" key="DiffContextDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586030212405" />
     <state width="1827" height="90" key="GridCell.Tab.0.bottom" timestamp="1586029730558">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
