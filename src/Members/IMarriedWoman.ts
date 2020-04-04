@@ -5,7 +5,5 @@ export interface IMarriedWoman {
 
     getChildren(): Human[];
 
-    getPartner(): Human;
-
     giveBirth(child: Human): { father: Father, mother: Mother, child: Human };
 }

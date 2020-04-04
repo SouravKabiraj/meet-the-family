@@ -1,7 +1,7 @@
-import {Father, Human, IMarriedMan, Man, MarriedWoman, Mother} from "../internal";
+import {Father, Human, IMarriedMan, IMarrried, Man, MarriedWoman, Mother} from "../internal";
 
 
-export class MarriedMan extends Man implements IMarriedMan {
+export class MarriedMan extends Man implements IMarriedMan, IMarrried {
     private partner: MarriedWoman;
 
     constructor(me: Man, partner: MarriedWoman) {

@@ -1,3 +1,4 @@
+export {IMarrried} from "./Members/IMarrried";
 export {Gender} from "./Members/Gender";
 export {IHuman} from "./Members/IHuman";
 export {Human} from "./Members/Human";

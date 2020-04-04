@@ -16,7 +16,7 @@ export class FamilyFacade {
         this.king = king;
     }
 
-    private search(name: string): Human {
+    public search(name: string): Human {
         return this.members.get(name);
     }
 

@@ -7,7 +7,7 @@ export class Father extends MarriedMan implements IParent {
     }
 
     getChildren(): Human[] {
-        const partner: Mother = <Mother>this.getPartner();
+        const partner: Mother = <Mother>this._partner;
         return partner.getChildren();
     }
 }

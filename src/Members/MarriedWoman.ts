@@ -1,9 +1,8 @@
-import {Father, Human, IMarriedWoman, MarriedMan, Mother, Woman} from "../internal";
+import {Father, Human, IMarriedWoman, IMarrried, MarriedMan, Mother, Woman} from "../internal";
 
 
-export class MarriedWoman extends Woman implements IMarriedWoman {
+export class MarriedWoman extends Woman implements IMarriedWoman, IMarrried {
     protected children: Human[];
-
 
     constructor(me: Woman) {
         super(me.getFullName(), me.getDateOfBirth(), me.getMother(), me.getFather(), null);

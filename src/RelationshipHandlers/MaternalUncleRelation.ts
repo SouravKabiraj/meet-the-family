@@ -3,14 +3,14 @@ import {Gender} from "../Members/Gender";
 import {IRelation} from "./IRelation";
 import {SiblingsRelation} from "./SiblingsRelation";
 
-export class PaternalUncleRelation implements IRelation<Human> {
+export class MaternalUncleRelation implements IRelation {
     constructor(private siblings: SiblingsRelation) {
     }
 
     getRelativesOf(human: Human): Human[] {
-        const father = human.getFather();
-        const fathersSiblings = this.siblings.getRelativesOf(father);
-        fathersSiblings.filter(h => h.gender === Gender.MALE);
-        return fathersSiblings;
+        const mother = human.getMother();
+        const MothersSiblings = this.siblings.getRelativesOf(mother);
+        MothersSiblings.filter(h => h.gender === Gender.MALE);
+        return MothersSiblings;
     }
 }
