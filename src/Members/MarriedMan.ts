@@ -2,15 +2,13 @@ import {Father, Human, IMarriedMan, IMarrried, Man, MarriedWoman, Mother} from "
 
 
 export class MarriedMan extends Man implements IMarriedMan, IMarrried {
-    private partner: MarriedWoman;
-
     constructor(me: Man, partner: MarriedWoman) {
         super(me.getFullName(), me.getDateOfBirth(), me.getMother(), me.getFather(), null);
         this.setPartner(partner);
     }
 
     getPartner(): MarriedWoman {
-        return this.partner;
+        return <MarriedWoman>this._partner;
     }
 
     beFather(): Father {
