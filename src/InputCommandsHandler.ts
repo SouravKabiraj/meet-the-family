@@ -9,10 +9,8 @@ import {SiblingsRelation} from "./RelationshipHandlers/SiblingsRelation";
 import {SisterInLawRelation} from "./RelationshipHandlers/SisterInLawRelation";
 import {SonRelation} from "./RelationshipHandlers/SonRelation";
 import {DaughterRelation} from "./RelationshipHandlers/DaughterRelation";
-import {FamilyCommand} from "./Command/FamilyCommand";
-import {RelationshipCommand} from "./Command/RelationshipCommand";
 
-export class Test {
+export class InputCommandsHandler {
     public static execute(commands: string[][]): string[] {
         const familyFacade = LengaburuEmperorFamilyFacadeBuilder.withInitialData().build();
         const sonRelation = new SonRelation();

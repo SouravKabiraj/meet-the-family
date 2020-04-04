@@ -1,4 +1,4 @@
-import {Test} from "./Test";
+import {InputCommandsHandler} from "./InputCommandsHandler";
 
 const fs = require('fs');
 
@@ -12,7 +12,7 @@ class MeetMyFamily {
         commandLines.forEach(commandLine => {
             formattedCommands.push(commandLine.split(' '));
         });
-        const outputs = Test.execute(formattedCommands).toString().replace(/\,/g, "\n");
+        const outputs = InputCommandsHandler.execute(formattedCommands).toString().replace(/\,/g, "\n");
         await fs.writeFileSync('./Output/Output.txt', outputs);
     }
 }
