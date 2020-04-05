@@ -4,7 +4,7 @@ const fs = require('fs');
 
 export class MeetMyFamily {
     public static async main() {
-        const filename = process.argv[3];
+        const filename = process.argv[2];
         const contents = await fs.readFileSync(filename, {encoding: 'utf8'})
         const formattedCommands = [];
         const commandLines = contents.split('\n');
