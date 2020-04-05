@@ -12,8 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c89349c4-f886-49f3-9407-fb170a69d52a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +157,8 @@
       <workItem from="1586016362321" duration="12943000" />
       <workItem from="1586041213704" duration="2203000" />
       <workItem from="1586075323624" duration="7356000" />
-      <workItem from="1586083196546" duration="1827000" />
+      <workItem from="1586083196546" duration="2564000" />
+      <workItem from="1586099326600" duration="233000" />
     </task>
     <task id="LOCAL-00001" summary="#001 | Sourav | Added git ignore file.">
       <created>1585995713572</created>
@@ -279,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586083774988</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="#015 | Sourav | Modified npm start process.">
+      <created>1586088163886</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1586088163886</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +319,8 @@
     <MESSAGE value="#012 | Sourav | Modified git ignore file." />
     <MESSAGE value="#013 | Sourav | Added Unit tests." />
     <MESSAGE value="#014 | Sourav | Modified start file." />
-    <option name="LAST_COMMIT_MESSAGE" value="#014 | Sourav | Modified start file." />
+    <MESSAGE value="#015 | Sourav | Modified npm start process." />
+    <option name="LAST_COMMIT_MESSAGE" value="#015 | Sourav | Modified npm start process." />
   </component>
   <component name="WindowStateProjectService">
     <state x="608" y="205" width="764" height="704" key="#FamilyFacadeSpec" timestamp="1586083737617">
@@ -331,34 +339,34 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="728" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1585916833502" />
-    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2" timestamp="1586083774782">
+    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2" timestamp="1586088163653">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586083774782" />
+    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586088163653" />
     <state width="1106" height="506" key="DebuggerActiveHint" timestamp="1586030745959">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1106" height="506" key="DebuggerActiveHint/70.27.1850.1053@70.27.1850.1053" timestamp="1586030745959" />
-    <state x="240" y="124" width="1480" height="879" key="DiffContextDialog" timestamp="1586080090676">
+    <state x="240" y="124" width="1480" height="879" key="DiffContextDialog" timestamp="1586088132081">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="240" y="124" width="1480" height="879" key="DiffContextDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586080090676" />
-    <state width="1827" height="318" key="GridCell.Tab.0.bottom" timestamp="1586083755434">
+    <state x="240" y="124" width="1480" height="879" key="DiffContextDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586088132081" />
+    <state width="1827" height="318" key="GridCell.Tab.0.bottom" timestamp="1586096364420">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="318" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586083755434" />
-    <state width="1827" height="318" key="GridCell.Tab.0.center" timestamp="1586083755432">
+    <state width="1827" height="318" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586096364420" />
+    <state width="1827" height="318" key="GridCell.Tab.0.center" timestamp="1586096364419">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="318" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586083755432" />
-    <state width="1827" height="318" key="GridCell.Tab.0.left" timestamp="1586083755432">
+    <state width="1827" height="318" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586096364419" />
+    <state width="1827" height="318" key="GridCell.Tab.0.left" timestamp="1586096364419">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="318" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586083755432" />
-    <state width="1827" height="318" key="GridCell.Tab.0.right" timestamp="1586083755433">
+    <state width="1827" height="318" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586096364419" />
+    <state width="1827" height="318" key="GridCell.Tab.0.right" timestamp="1586096364420">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="318" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586083755433" />
+    <state width="1827" height="318" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586096364420" />
     <state width="1827" height="306" key="GridCell.Tab.1.bottom" timestamp="1586083149546">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
