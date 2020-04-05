@@ -9,7 +9,10 @@
 </ol>
 
 <h3>User Manual</h3>
-- Setup : npm i && npm run compile
-- Input : Modify ./Input/Input.txt with proper data
-- Run   : npm start
-- Output: Open Output/Output.txt
+<ol>
+<li> Setup : npm i && npm run compile</li>
+<li> Input : Modify ./Input/Input.txt with proper data</li>
+<li> Run   : npm start</li>
+<li> Output: Open Output/Output.txt
+</li>
+</ol>
