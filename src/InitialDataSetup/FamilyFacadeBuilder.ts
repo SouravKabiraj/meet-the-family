@@ -1,4 +1,4 @@
-import {FamilyFacade} from "../MeetTheFamilyFacade";
+import {FamilyFacade} from "../FamilyFacade";
 import {Gender, Man, Woman} from "../internal";
 import {ManBuilder} from "../Builders/ManBuilder";
 import {WomanBuilder} from "../Builders/WomanBuilder";
@@ -11,6 +11,7 @@ export class LengaburuEmperorFamilyFacadeBuilder {
     }
 
     public static withInitialData(): LengaburuEmperorFamilyFacadeBuilder {
+        console.log('Initial setup started...')
         return new LengaburuEmperorFamilyFacadeBuilder()
             .withCoronation('King Shan')
             .withMarriage('King Shan', 'Queen Anga')
@@ -46,13 +47,13 @@ export class LengaburuEmperorFamilyFacadeBuilder {
     }
 
     private withCoronation(kingsName: string): LengaburuEmperorFamilyFacadeBuilder {
-        console.log(`withCoronation (${kingsName})`);
+        // console.log(`withCoronation (${kingsName})`);
         this.familyFacade.coronation(kingsName);
         return this;
     }
 
     private withMarriage(familyMemberName: string, newMemberName: string): LengaburuEmperorFamilyFacadeBuilder {
-        console.log(`withMarriage (${familyMemberName}, ${newMemberName})`)
+        // console.log(`withMarriage (${familyMemberName}, ${newMemberName})`)
         const genderOfNewMember = this.familyFacade.getGenderOf(familyMemberName);
         let newMember;
         if (genderOfNewMember === Gender.MALE) {
@@ -65,13 +66,13 @@ export class LengaburuEmperorFamilyFacadeBuilder {
     }
 
     private withNamingCeremony(mothersName: string, childesName: string, gender: Gender): LengaburuEmperorFamilyFacadeBuilder {
-        console.log(`withNamingCeremony (${mothersName}, ${childesName}, ${gender})`)
+        // console.log(`withNamingCeremony (${mothersName}, ${childesName}, ${gender})`)
         this.familyFacade.namingCeremony(mothersName, childesName, gender);
         return this;
     }
 
     public build(): FamilyFacade {
-        console.log('Initial setup completed')
+        console.log('Initial setup completed.')
         return this.familyFacade;
     }
 }

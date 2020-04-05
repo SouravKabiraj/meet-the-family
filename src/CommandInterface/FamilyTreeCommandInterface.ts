@@ -1,6 +1,6 @@
 import {CommandInterface} from "./CommandInterface";
 import {NotImplemented} from "../Error/NotImplementedError";
-import {FamilyFacade} from "../MeetTheFamilyFacade";
+import {FamilyFacade} from "../FamilyFacade";
 import {BrotherInLawRelation} from "../RelationshipHandlers/BrotherInLawRelation";
 import {MaternalAuntRelation} from "../RelationshipHandlers/MaternalAuntRelation";
 import {MaternalUncleRelation} from "../RelationshipHandlers/MaternalUncleRelation";
@@ -97,3 +97,6 @@ export class FamilyTreeCommandInterface extends CommandInterface {
         throw new NotImplemented();
     }
 }
+
+
+

@@ -31,7 +31,7 @@
   "devDependencies": {
     "@types/express": "^4.17.1",
     "@types/node": "^12.7.5",
-    "chai": "latest",
+    "chai": "^4.2.0",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-mocha": "^7.0.1",
