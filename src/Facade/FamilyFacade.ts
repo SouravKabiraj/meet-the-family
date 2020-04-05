@@ -1,8 +1,8 @@
-import {Father, Gender, Human, Man, MarriedMan, MarriedWoman, Mother} from "./internal";
-import {ManBuilder} from "./Builders/ManBuilder";
-import {WomanBuilder} from "./Builders/WomanBuilder";
-import {EntityNotFound} from "./Error/EntityNotFound";
-import {InValidActionError} from "./Error/InValidActionError";
+import {Father, Gender, Human, Man, MarriedMan, MarriedWoman, Mother} from "../internal";
+import {ManBuilder} from "../Builders/ManBuilder";
+import {WomanBuilder} from "../Builders/WomanBuilder";
+import {EntityNotFound} from "../Error/EntityNotFound";
+import {InValidActionError} from "../Error/InValidActionError";
 
 export class FamilyFacade {
     private king: Human;

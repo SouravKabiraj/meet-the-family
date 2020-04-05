@@ -1,8 +1,8 @@
-import {FamilyFacade} from "../src/FamilyFacade";
+import {FamilyFacade} from "../../src/Facade/FamilyFacade";
 import {suite, test} from 'mocha-typescript';
 import {expect} from 'chai';
-import {Gender, MarriedMan, MarriedWoman} from "../src/internal";
-import {WomanBuilder} from "../src/Builders/WomanBuilder";
+import {Gender, MarriedMan, MarriedWoman} from "../../src/internal";
+import {WomanBuilder} from "../../src/Builders/WomanBuilder";
 
 @suite
 class FamilyFacadeSpec {

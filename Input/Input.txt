@@ -1,3 +1,2 @@
-ADD_CHILD Vritha Srutak Male
-GET_RELATIONSHIP Chit Son
-ADD_CHILD Dritha Srutaki Male
+ADD_CHILD Satya Yaya Female
+GET_RELATIONSHIP Satvy Sister-In-Law

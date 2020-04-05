@@ -1,6 +1,6 @@
 import {CommandInterface} from "./CommandInterface";
 import {NotImplemented} from "../Error/NotImplementedError";
-import {FamilyFacade} from "../FamilyFacade";
+import {FamilyFacade} from "../Facade/FamilyFacade";
 import {BrotherInLawRelation} from "../RelationshipHandlers/BrotherInLawRelation";
 import {MaternalAuntRelation} from "../RelationshipHandlers/MaternalAuntRelation";
 import {MaternalUncleRelation} from "../RelationshipHandlers/MaternalUncleRelation";

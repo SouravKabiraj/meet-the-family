@@ -1,4 +1,4 @@
-import {FamilyFacade} from "../FamilyFacade";
+import {FamilyFacade} from "../Facade/FamilyFacade";
 import {Gender, Man, Woman} from "../internal";
 import {ManBuilder} from "../Builders/ManBuilder";
 import {WomanBuilder} from "../Builders/WomanBuilder";
@@ -11,7 +11,7 @@ export class LengaburuEmperorFamilyFacadeBuilder {
     }
 
     public static withInitialData(): LengaburuEmperorFamilyFacadeBuilder {
-        console.log('Initial setup started...')
+        // console.log('Initial setup started...')
         return new LengaburuEmperorFamilyFacadeBuilder()
             .withCoronation('King Shan')
             .withMarriage('King Shan', 'Queen Anga')
@@ -72,7 +72,7 @@ export class LengaburuEmperorFamilyFacadeBuilder {
     }
 
     public build(): FamilyFacade {
-        console.log('Initial setup completed.')
+        // console.log('Initial setup completed.')
         return this.familyFacade;
     }
 }

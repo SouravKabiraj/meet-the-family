@@ -2,8 +2,7 @@ import {InputCommandsHandler} from "./InputCommandsHandler";
 
 const fs = require('fs');
 
-
-class MeetMyFamily {
+export class MeetMyFamily {
     public static async main() {
         const filename = process.argv[3];
         const contents = await fs.readFileSync(filename, {encoding: 'utf8'})
@@ -12,8 +11,13 @@ class MeetMyFamily {
         commandLines.forEach(commandLine => {
             formattedCommands.push(commandLine.split(' '));
         });
-        const outputs = InputCommandsHandler.execute(formattedCommands).toString().replace(/\,/g, "\n");
-        await fs.writeFileSync('./Output/Output.txt', outputs);
+        const formattedOutput = InputCommandsHandler.execute(formattedCommands);
+        formattedOutput.forEach(output => {
+            if (output != undefined) {
+                console.log(output.toString().replace(/\,/g, " "));
+            }
+        })
+        await fs.writeFileSync('./Output/Output.txt', formattedOutput);
     }
 }
 
