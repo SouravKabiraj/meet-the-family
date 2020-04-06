@@ -45,45 +45,56 @@ export class FamilyTreeCommandInterface extends CommandInterface {
                         }
                     }
                 case FamilyCommand.GET_RELATIONSHIP:
+                    let result;
                     const searchedMember = this.familyFacade.search(arg[1]);
                     switch (arg[2]) {
                         case RelationshipCommand.Son:
-                            return this.sonRelation.getRelativesOf(searchedMember)
+                            result = this.sonRelation.getRelativesOf(searchedMember)
                                 .map(r => r.getFullName())
                                 .toString();
+                            break;
                         case RelationshipCommand.Daughter:
-                            return this.daughterRelation.getRelativesOf(<Father>searchedMember)
+                            result = this.daughterRelation.getRelativesOf(<Father>searchedMember)
                                 .map(r => r.getFullName())
                                 .toString();
+                            break;
                         case RelationshipCommand.BrotherInLaw:
-                            return this.brotherInLawRelation.getRelativesOf(searchedMember)
+                            result = this.brotherInLawRelation.getRelativesOf(searchedMember)
                                 .map(r => r.getFullName())
                                 .toString();
+                            break;
                         case RelationshipCommand.SisterInLaw:
-                            return this.sisterInLawRelation.getRelativesOf(searchedMember)
+                            result = this.sisterInLawRelation.getRelativesOf(searchedMember)
                                 .map(r => r.getFullName())
                                 .toString();
+                            break;
                         case RelationshipCommand.Siblings:
-                            return this.siblingsRelation.getRelativesOf(searchedMember)
+                            result = this.siblingsRelation.getRelativesOf(searchedMember)
                                 .map(r => r.getFullName())
                                 .toString();
+                            break;
                         case RelationshipCommand.MaternalAunt:
-                            return this.maternalAuntRelation.getRelativesOf(searchedMember)
+                            result = this.maternalAuntRelation.getRelativesOf(searchedMember)
                                 .map(r => r.getFullName())
                                 .toString();
+                            break;
                         case RelationshipCommand.MaternalUncle:
-                            return this.maternalUncleRelation.getRelativesOf(searchedMember)
+                            result = this.maternalUncleRelation.getRelativesOf(searchedMember)
                                 .map(r => r.getFullName())
                                 .toString();
+                            break;
                         case RelationshipCommand.PaternalAunt:
-                            return this.paternalAuntRelation.getRelativesOf(searchedMember)
+                            result = this.paternalAuntRelation.getRelativesOf(searchedMember)
                                 .map(r => r.getFullName())
                                 .toString();
+                            break;
                         case RelationshipCommand.PaternalUncle:
-                            return this.paternalUncleRelation.getRelativesOf(searchedMember)
+                            result = this.paternalUncleRelation.getRelativesOf(searchedMember)
                                 .map(r => r.getFullName())
                                 .toString();
+                            break;
                     }
+                    return result ? result : 'NONE';
             }
         } catch (e) {
             switch (e.constructor.name) {

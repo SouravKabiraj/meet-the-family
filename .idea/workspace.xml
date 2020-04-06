@@ -10,17 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c89349c4-f886-49f3-9407-fb170a69d52a" name="Default Changelist" comment="#016 | Sourav | Changed Readme file.">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/kabiraj.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/kabiraj.xml" afterDir="false" />
+    <list default="true" id="c89349c4-f886-49f3-9407-fb170a69d52a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Input/Input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Input/Input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CommandInterface/FamilyTreeCommandInterface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandInterface/FamilyTreeCommandInterface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationshipHandlers/BrotherInLawRelation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationshipHandlers/BrotherInLawRelation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationshipHandlers/IRelation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationshipHandlers/IRelation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationshipHandlers/ISiblingInLawRelation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationshipHandlers/ISiblingInLawRelation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationshipHandlers/SiblingsRelation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationshipHandlers/SiblingsRelation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationshipHandlers/SisterInLawRelation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationshipHandlers/SisterInLawRelation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Facade/FamilyFacade.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Facade/FamilyFacade.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/CommandInterface/FamilyTreeCommandInterface.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/CommandInterface/FamilyTreeCommandInterface.spec.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,16 +64,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Mocha.FamilyTreeCommandInterfaceSpec">
-    <configuration name="devStart" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="devStart" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="FamilyTreeCommandInterfaceSpec" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -96,7 +79,7 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="FamilyTreeCommandInterfaceSpec.shouldReturnAllBrotherInLawNames" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+    <configuration name="FamilyTreeCommandInterfaceSpec.shouldReturnNoneWhileNotASingleItemExists" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
@@ -108,11 +91,11 @@
       <test-file>$PROJECT_DIR$/test/CommandInterface/FamilyTreeCommandInterface.spec.ts</test-file>
       <test-names>
         <name value="FamilyTreeCommandInterfaceSpec" />
-        <name value="shouldReturnAllBrotherInLawNames" />
+        <name value="shouldReturnNoneWhileNotASingleItemExists" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="FamilyTreeCommandInterfaceSpec.shouldReturnAllSisterInLawNames" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+    <configuration name="FamilyTreeCommandInterfaceSpec.shouldThrowAddChildFailedError" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
@@ -124,11 +107,11 @@
       <test-file>$PROJECT_DIR$/test/CommandInterface/FamilyTreeCommandInterface.spec.ts</test-file>
       <test-names>
         <name value="FamilyTreeCommandInterfaceSpec" />
-        <name value="shouldReturnAllSisterInLawNames" />
+        <name value="shouldThrowAddChildFailedError" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="FamilyTreeCommandInterfaceSpec.shouldReturnAllSisterInLaws" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+    <configuration name="FamilyTreeCommandInterfaceSpec.shouldThrowErrorWhileAddChildIsNotPossible" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
@@ -140,17 +123,33 @@
       <test-file>$PROJECT_DIR$/test/CommandInterface/FamilyTreeCommandInterface.spec.ts</test-file>
       <test-names>
         <name value="FamilyTreeCommandInterfaceSpec" />
-        <name value="shouldReturnAllSisterInLaws" />
+        <name value="shouldThrowErrorWhileAddChildIsNotPossible" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="FamilyTreeCommandInterfaceSpec.shouldThrowPersonNotFoundError" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>mocha-typescript</ui>
+      <extra-mocha-options>--require ts-node/register</extra-mocha-options>
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/CommandInterface/FamilyTreeCommandInterface.spec.ts</test-file>
+      <test-names>
+        <name value="FamilyTreeCommandInterfaceSpec" />
+        <name value="shouldThrowPersonNotFoundError" />
       </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Mocha.FamilyTreeCommandInterfaceSpec" />
-        <item itemvalue="Mocha.FamilyTreeCommandInterfaceSpec.shouldReturnAllSisterInLaws" />
-        <item itemvalue="Mocha.FamilyTreeCommandInterfaceSpec.shouldReturnAllBrotherInLawNames" />
-        <item itemvalue="Mocha.FamilyTreeCommandInterfaceSpec.shouldReturnAllSisterInLawNames" />
-        <item itemvalue="npm.devStart" />
+        <item itemvalue="Mocha.FamilyTreeCommandInterfaceSpec.shouldReturnNoneWhileNotASingleItemExists" />
+        <item itemvalue="Mocha.FamilyTreeCommandInterfaceSpec.shouldThrowAddChildFailedError" />
+        <item itemvalue="Mocha.FamilyTreeCommandInterfaceSpec.shouldThrowPersonNotFoundError" />
+        <item itemvalue="Mocha.FamilyTreeCommandInterfaceSpec.shouldThrowErrorWhileAddChildIsNotPossible" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +174,7 @@
       <workItem from="1586083196546" duration="2564000" />
       <workItem from="1586099326600" duration="993000" />
       <workItem from="1586155190831" duration="5746000" />
-      <workItem from="1586183735448" duration="3801000" />
+      <workItem from="1586183735448" duration="5216000" />
     </task>
     <task id="LOCAL-00001" summary="#001 | Sourav | Added git ignore file.">
       <created>1585995713572</created>
@@ -324,7 +323,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586185051113</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="#017 | Sourav | Updated sister-in-law relation.">
+      <created>1586187560260</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1586187560260</updated>
+    </task>
+    <task id="LOCAL-00023" summary="#018 | Sourav | Improved test cases.">
+      <created>1586188257354</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1586188257354</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,17 +373,18 @@
     <MESSAGE value="#015 | Sourav | Modified npm start process." />
     <MESSAGE value="#016 | Sourav | Changed Readme file." />
     <MESSAGE value="#017 | Sourav | Updated sister-in-law relation." />
-    <option name="LAST_COMMIT_MESSAGE" value="#017 | Sourav | Updated sister-in-law relation." />
+    <MESSAGE value="#018 | Sourav | Improved test cases." />
+    <option name="LAST_COMMIT_MESSAGE" value="#018 | Sourav | Improved test cases." />
   </component>
   <component name="WindowStateProjectService">
     <state x="608" y="205" width="764" height="704" key="#FamilyFacadeSpec" timestamp="1586083737617">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="608" y="205" width="764" height="704" key="#FamilyFacadeSpec/70.27.1850.1053@70.27.1850.1053" timestamp="1586083737617" />
-    <state x="170" y="127" width="1650" height="853" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1586186927561">
+    <state x="170" y="127" width="1650" height="853" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1586188170960">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="170" y="127" width="1650" height="853" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586186927561" />
+    <state x="170" y="127" width="1650" height="853" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586188170960" />
     <state x="690" y="355" width="600" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586005513480">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -383,10 +397,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="728" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1585916833502" />
-    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2" timestamp="1586185050468">
+    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2" timestamp="1586188257281">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586185050468" />
+    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586188257281" />
     <state width="1106" height="506" key="DebuggerActiveHint" timestamp="1586187165214">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -395,70 +409,70 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="240" y="124" width="1480" height="879" key="DiffContextDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586185043836" />
-    <state width="1827" height="262" key="GridCell.Tab.0.bottom" timestamp="1586187516956">
+    <state width="1827" height="185" key="GridCell.Tab.0.bottom" timestamp="1586188939989">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="262" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586187516956" />
-    <state width="1827" height="262" key="GridCell.Tab.0.center" timestamp="1586187516956">
+    <state width="1827" height="185" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586188939989" />
+    <state width="1827" height="185" key="GridCell.Tab.0.center" timestamp="1586188939989">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="262" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586187516956" />
-    <state width="1827" height="262" key="GridCell.Tab.0.left" timestamp="1586187516955">
+    <state width="1827" height="185" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586188939989" />
+    <state width="1827" height="185" key="GridCell.Tab.0.left" timestamp="1586188939989">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="262" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586187516955" />
-    <state width="1827" height="262" key="GridCell.Tab.0.right" timestamp="1586187516956">
+    <state width="1827" height="185" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586188939989" />
+    <state width="1827" height="185" key="GridCell.Tab.0.right" timestamp="1586188939989">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="262" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586187516956" />
-    <state width="1827" height="262" key="GridCell.Tab.1.bottom" timestamp="1586187516957">
+    <state width="1827" height="185" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586188939989" />
+    <state width="1827" height="202" key="GridCell.Tab.1.bottom" timestamp="1586188548223">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="262" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586187516957" />
-    <state width="1827" height="262" key="GridCell.Tab.1.center" timestamp="1586187516956">
+    <state width="1827" height="202" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586188548223" />
+    <state width="1827" height="202" key="GridCell.Tab.1.center" timestamp="1586188548223">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="262" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586187516956" />
-    <state width="1827" height="262" key="GridCell.Tab.1.left" timestamp="1586187516956">
+    <state width="1827" height="202" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586188548223" />
+    <state width="1827" height="202" key="GridCell.Tab.1.left" timestamp="1586188548223">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="262" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586187516956" />
-    <state width="1827" height="262" key="GridCell.Tab.1.right" timestamp="1586187516956">
+    <state width="1827" height="202" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586188548223" />
+    <state width="1827" height="202" key="GridCell.Tab.1.right" timestamp="1586188548223">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="262" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586187516956" />
-    <state width="1827" height="262" key="GridCell.Tab.2.bottom" timestamp="1586187516959">
+    <state width="1827" height="202" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586188548223" />
+    <state width="1827" height="202" key="GridCell.Tab.2.bottom" timestamp="1586188548224">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="262" key="GridCell.Tab.2.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586187516959" />
-    <state width="1827" height="262" key="GridCell.Tab.2.center" timestamp="1586187516957">
+    <state width="1827" height="202" key="GridCell.Tab.2.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586188548224" />
+    <state width="1827" height="202" key="GridCell.Tab.2.center" timestamp="1586188548223">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="262" key="GridCell.Tab.2.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586187516957" />
-    <state width="1827" height="262" key="GridCell.Tab.2.left" timestamp="1586187516957">
+    <state width="1827" height="202" key="GridCell.Tab.2.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586188548223" />
+    <state width="1827" height="202" key="GridCell.Tab.2.left" timestamp="1586188548223">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="262" key="GridCell.Tab.2.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586187516957" />
-    <state width="1827" height="262" key="GridCell.Tab.2.right" timestamp="1586187516957">
+    <state width="1827" height="202" key="GridCell.Tab.2.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586188548223" />
+    <state width="1827" height="202" key="GridCell.Tab.2.right" timestamp="1586188548224">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="262" key="GridCell.Tab.2.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586187516957" />
-    <state width="1827" height="262" key="GridCell.Tab.3.bottom" timestamp="1586187516960">
+    <state width="1827" height="202" key="GridCell.Tab.2.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586188548224" />
+    <state width="1827" height="202" key="GridCell.Tab.3.bottom" timestamp="1586188548225">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="262" key="GridCell.Tab.3.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586187516960" />
-    <state width="1827" height="262" key="GridCell.Tab.3.center" timestamp="1586187516959">
+    <state width="1827" height="202" key="GridCell.Tab.3.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586188548225" />
+    <state width="1827" height="202" key="GridCell.Tab.3.center" timestamp="1586188548224">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="262" key="GridCell.Tab.3.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586187516959" />
-    <state width="1827" height="262" key="GridCell.Tab.3.left" timestamp="1586187516959">
+    <state width="1827" height="202" key="GridCell.Tab.3.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586188548224" />
+    <state width="1827" height="202" key="GridCell.Tab.3.left" timestamp="1586188548224">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="262" key="GridCell.Tab.3.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586187516959" />
-    <state width="1827" height="262" key="GridCell.Tab.3.right" timestamp="1586187516960">
+    <state width="1827" height="202" key="GridCell.Tab.3.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586188548224" />
+    <state width="1827" height="202" key="GridCell.Tab.3.right" timestamp="1586188548224">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="262" key="GridCell.Tab.3.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586187516960" />
+    <state width="1827" height="202" key="GridCell.Tab.3.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586188548224" />
     <state x="731" y="256" width="517" height="602" key="RollbackChangesDialog" timestamp="1585995087236">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -487,52 +501,5 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="658" y="259" width="672" height="678" key="search.everywhere.popup/70.27.1850.1053@70.27.1850.1053" timestamp="1586186773914" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/RelationshipHandlers/ISiblingInLawRelation.ts</url>
-          <line>28</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/RelationshipHandlers/ISiblingInLawRelation.ts</url>
-          <line>29</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="64" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/RelationshipHandlers/ISiblingInLawRelation.ts</url>
-          <line>32</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/RelationshipHandlers/ISiblingInLawRelation.ts</url>
-          <line>33</line>
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/RelationshipHandlers/ISiblingInLawRelation.ts</url>
-          <line>34</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="67" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/RelationshipHandlers/ISiblingInLawRelation.ts</url>
-          <line>30</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/RelationshipHandlers/ISiblingInLawRelation.ts</url>
-          <line>31</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

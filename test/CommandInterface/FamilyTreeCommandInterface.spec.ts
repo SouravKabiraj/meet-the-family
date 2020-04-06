@@ -49,7 +49,7 @@ class FamilyTreeCommandInterfaceSpec {
     private shouldThrowErrorWhileWrongMothersNameEntered(): void {
         const returnedValue = this.targetObject.Execute(FamilyCommand.ADD_CHILD, 'shdkfhsdk', 'Test1', Gender.MALE);
 
-        expect(returnedValue).to.equal('CHILD_ADDITION_FAILED');
+        expect(returnedValue).to.equal('PERSON_NOT_FOUND');
     }
 
     @test
@@ -78,6 +78,13 @@ class FamilyTreeCommandInterfaceSpec {
         const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'Satya', RelationshipCommand.Siblings);
 
         expect(returnedValue).to.equal('Chit,Ish,Vich,Aras');
+    }
+
+    @test
+    private shouldAllVasasSiblings(): void {
+        const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'Vasa', RelationshipCommand.Siblings);
+
+        expect(returnedValue).to.equal('NONE');
     }
 
     @test
@@ -127,5 +134,33 @@ class FamilyTreeCommandInterfaceSpec {
         const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'Vjkesfhkjasa', RelationshipCommand.PaternalUncle);
 
         expect(returnedValue).to.equal('PERSON_NOT_FOUND');
+    }
+
+    @test
+    private shouldThrowErrorWhileAddChildIsNotPossible(): void {
+        const returnedValue = this.targetObject.Execute(FamilyCommand.ADD_CHILD, 'Pjali', 'Srutak', Gender.MALE);
+
+        expect(returnedValue).to.equal('PERSON_NOT_FOUND');
+    }
+
+    @test
+    private shouldThrowPersonNotFoundError(): void {
+        const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'Pjali', RelationshipCommand.Son);
+
+        expect(returnedValue).to.equal('PERSON_NOT_FOUND');
+    }
+
+    @test
+    private shouldThrowAddChildFailedError(): void {
+        const returnedValue = this.targetObject.Execute(FamilyCommand.ADD_CHILD, 'Asva', 'Vani', Gender.FEMALE);
+
+        expect(returnedValue).to.equal('CHILD_ADDITION_FAILED');
+    }
+
+    @test
+    private shouldReturnNoneWhileNotASingleItemExists(): void {
+        const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'Vasa', RelationshipCommand.Siblings);
+
+        expect(returnedValue).to.equal('NONE');
     }
 }
