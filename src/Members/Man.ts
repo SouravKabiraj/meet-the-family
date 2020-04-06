@@ -7,24 +7,17 @@ export class Man extends Human implements IMan {
 
 
     public marry(partner: Human): { husband: MarriedMan, wife: MarriedWoman } {
-        const newMe = this.getMarried();
-        const wife = <MarriedWoman>partner.getMarried();
+        const newMe = this.beMarried();
+        const wife = <MarriedWoman>partner.beMarried();
         newMe.setPartner(wife);
         wife.setPartner(newMe);
+        newMe.updateMotherRef();
+        wife.updateMotherRef();
         return {husband: newMe, wife: wife};
     }
 
-    getMarried() {
-        const newMe = new MarriedMan(this, null);
-        try {
-            this.getMother().getChildren().forEach(child => {
-                if (child === this) {
-                    child = newMe;
-                }
-            });
-        } catch (e) {
-        }
-        return newMe;
+    beMarried(): MarriedMan {
+        return new MarriedMan(this, null);
     }
 }
 

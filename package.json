@@ -9,7 +9,7 @@
     "test": "mocha --require ts-node/register ./test/**/*.spec.ts",
     "build&Run": "tsc -p tsconfig.json && node $NODE_DEBUG_OPTION --inspect=0.0.0.0 --require ts-node/register/type-check src/app.ts",
     "start": "node geektrust.js",
-    "devStart": "node geektrust.js --silent ./Input/Input.txt"
+    "devStart": "node geektrust.js ./Input/Input.txt --silent"
   },
   "author": "kabiraj",
   "license": "ISC",

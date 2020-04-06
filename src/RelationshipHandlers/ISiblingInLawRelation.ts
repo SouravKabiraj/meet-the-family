@@ -1,13 +1,12 @@
 import {IRelation} from "./IRelation";
-import {Human} from "../Members/Human";
 import {SiblingsRelation} from "./SiblingsRelation";
-import {Father, MarriedMan, MarriedWoman, Mother} from "../internal";
+import {Father, Gender, Human, Man, MarriedMan, MarriedWoman, Mother, Woman} from "../internal";
 
-export class ISiblingInLawRelation implements IRelation {
-    constructor(private siblings: SiblingsRelation) {
+export abstract class ISiblingInLawRelation implements IRelation {
+    protected constructor(private siblings: SiblingsRelation) {
     }
 
-    getRelativesOf(married: Human): Human[] {
+    getPartnerSiblings(married: Human): Human[] {
         let partner;
         switch (married.constructor.name) {
             case MarriedMan.name:
@@ -26,4 +25,13 @@ export class ISiblingInLawRelation implements IRelation {
         return this.siblings.getRelativesOf(partner);
     }
 
+    getRelativesOf(human): Human[] {
+        const sisterInLaws = [];
+        if (human.constructor.name !== Man.name && human.constructor.name !== Woman.name) {
+            sisterInLaws.push(...this.getPartnerSiblings(human));
+        }
+        const siblings = this.siblings.getRelativesOf(human);
+        sisterInLaws.push(...siblings.map((s: any) => s.getPartner()));
+        return sisterInLaws;
+    }
 }

@@ -67,6 +67,13 @@ class FamilyTreeCommandInterfaceSpec {
     }
 
     @test
+    private shouldReturnAllSisterInLaws(): void {
+        const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'Atya', RelationshipCommand.SisterInLaw);
+
+        expect(returnedValue).to.equal('Satvy,Krpi');
+    }
+
+    @test
     private shouldReturnSiblingsNames(): void {
         const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'Satya', RelationshipCommand.Siblings);
 

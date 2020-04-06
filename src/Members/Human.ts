@@ -60,6 +60,15 @@ export abstract class Human implements IHuman {
         this._partner = partner;
     }
 
-    abstract getMarried();
+    updateMotherRef() {
+        try {
+            const oldSelfRef = this.getMother().getChildren().find(child => child.getFullName() === this.getFullName());
+            const selfIndex = this.getMother().getChildren().indexOf(oldSelfRef);
+            this.getMother().getChildren()[selfIndex] = this;
+        } catch (e) {
+        }
+    }
+
+    abstract beMarried();
 }
 

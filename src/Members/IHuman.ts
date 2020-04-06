@@ -17,5 +17,5 @@ export interface IHuman {
 
     getMother(): MarriedWoman;
 
-    getMarried();
+    beMarried();
 }

@@ -1,4 +1,4 @@
-import {Father, Gender, Human, MarriedWoman, Mother} from "../internal";
+import {Father, Gender, Human, MarriedMan, MarriedWoman, Mother} from "../internal";
 
 
 export class Woman extends Human {
@@ -6,16 +6,7 @@ export class Woman extends Human {
         super(fullName, Gender.FEMALE, dateOfBirth, mother, father, partner);
     }
 
-    getMarried() {
-        const newMe = new MarriedWoman(this);
-        try {
-            this.getMother().getChildren().forEach(child => {
-                if (child === this) {
-                    child = newMe;
-                }
-            });
-        } catch (e) {
-        }
-        return newMe;
+    beMarried(): MarriedWoman {
+        return new MarriedWoman(this);
     }
 }

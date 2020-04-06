@@ -1,12 +1,16 @@
 import {ISiblingInLawRelation} from "./ISiblingInLawRelation";
 import {Gender, Human} from "../internal";
+import {SiblingsRelation} from "./SiblingsRelation";
 
 
 export class SisterInLawRelation extends ISiblingInLawRelation {
-    getRelativeOf(married: Human): Human[] {
-        const partner = (married as any).getPartner();
-        let partnersSiblings = super.getRelativesOf(married);
-        partnersSiblings = partnersSiblings.filter(h => (h.gender === Gender.FEMALE && h.getFullName() !== partner.getFullName()));
-        return partnersSiblings;
+
+    constructor(private siblingsRelation: SiblingsRelation) {
+        super(siblingsRelation);
+    }
+
+    getRelativesOf(human): Human[];
+    getRelativesOf(human: Human): Human[] {
+        return super.getRelativesOf(human).filter(h => (h.gender === Gender.FEMALE));
     }
 }

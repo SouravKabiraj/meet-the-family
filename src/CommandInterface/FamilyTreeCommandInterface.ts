@@ -56,11 +56,11 @@ export class FamilyTreeCommandInterface extends CommandInterface {
                                 .map(r => r.getFullName())
                                 .toString();
                         case RelationshipCommand.BrotherInLaw:
-                            return this.brotherInLawRelation.getRelativeOf(searchedMember)
+                            return this.brotherInLawRelation.getRelativesOf(searchedMember)
                                 .map(r => r.getFullName())
                                 .toString();
                         case RelationshipCommand.SisterInLaw:
-                            return this.sisterInLawRelation.getRelativeOf(searchedMember)
+                            return this.sisterInLawRelation.getRelativesOf(searchedMember)
                                 .map(r => r.getFullName())
                                 .toString();
                         case RelationshipCommand.Siblings:
