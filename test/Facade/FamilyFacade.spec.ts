@@ -1,7 +1,7 @@
 import {FamilyFacade} from "../../src/Facade/FamilyFacade";
 import {suite, test} from 'mocha-typescript';
 import {expect} from 'chai';
-import {Gender, MarriedMan, MarriedWoman} from "../../src/internal";
+import {Gender, Man, Woman} from "../../src/internal";
 import {WomanBuilder} from "../../src/Builders/WomanBuilder";
 
 @suite
@@ -18,7 +18,7 @@ class FamilyFacadeSpec {
 
         const kingObj = this.targetObject.search('King');
         expect(kingObj.getFullName()).to.equals('King');
-        expect(kingObj.gender).to.equals(Gender.MALE);
+        expect(kingObj.constructor.name).to.equals(Man.name);
     }
 
     @test
@@ -33,8 +33,8 @@ class FamilyFacadeSpec {
 
         const returnedQueen = this.targetObject.search('Queen');
         const returnedKing = this.targetObject.search('King');
-        expect(returnedQueen.constructor.name).to.equals(MarriedWoman.name);
-        expect(returnedKing.constructor.name).to.equals(MarriedMan.name);
+        expect(returnedQueen.constructor.name).to.equals(Woman.name);
+        expect(returnedKing.constructor.name).to.equals(Man.name);
     }
 
     @test
@@ -53,6 +53,6 @@ class FamilyFacadeSpec {
         this.targetObject.namingCeremony('Queen', 'Prince', Gender.MALE);
 
         expect(this.targetObject.search('Prince').getFullName()).to.equals('Prince');
-        expect(this.targetObject.search('Prince').gender).to.equals(Gender.MALE);
+        expect(this.targetObject.search('Prince').constructor.name).to.equals(Man.name);
     }
 }

@@ -11,35 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c89349c4-f886-49f3-9407-fb170a69d52a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Members/IWoman.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Builders/ManBuilder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Builders/ManBuilder.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Builders/WomanBuilder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Builders/WomanBuilder.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CommandInterface/FamilyTreeCommandInterface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandInterface/FamilyTreeCommandInterface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Facade/FamilyFacade.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Facade/FamilyFacade.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Members/Father.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Members/Human.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Members/Human.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Members/IHuman.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Members/IHuman.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Members/IMan.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Members/IMan.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Members/IMarriedMan.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Members/IMarriedWoman.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Members/IMarrried.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Members/Man.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Members/Man.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Members/MarriedMan.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Members/MarriedWoman.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Members/Mother.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Members/Woman.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Members/Woman.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationshipHandlers/BrotherInLawRelation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationshipHandlers/BrotherInLawRelation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationshipHandlers/DaughterRelation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationshipHandlers/DaughterRelation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationshipHandlers/ISiblingInLawRelation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationshipHandlers/ISiblingInLawRelation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationshipHandlers/MaternalAuntRelation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationshipHandlers/MaternalAuntRelation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationshipHandlers/MaternalUncleRelation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationshipHandlers/MaternalUncleRelation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationshipHandlers/PaternalAuntRelation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationshipHandlers/PaternalAuntRelation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationshipHandlers/PaternalUncleRelation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationshipHandlers/PaternalUncleRelation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationshipHandlers/SisterInLawRelation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationshipHandlers/SisterInLawRelation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationshipHandlers/SonRelation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationshipHandlers/SonRelation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/internal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/internal.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/CommandInterface/FamilyTreeCommandInterface.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/CommandInterface/FamilyTreeCommandInterface.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Facade/FamilyFacade.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/Facade/FamilyFacade.spec.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +62,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Mocha.FamilyTreeCommandInterfaceSpec">
+  <component name="RunManager" selected="Mocha.FamilyFacadeSpec">
     <configuration name="compile" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -98,6 +71,21 @@
       </scripts>
       <node-interpreter value="project" />
       <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="FamilyFacadeSpec" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>mocha-typescript</ui>
+      <extra-mocha-options>--require ts-node/register</extra-mocha-options>
+      <test-kind>SUITE</test-kind>
+      <test-file>$PROJECT_DIR$/test/Facade/FamilyFacade.spec.ts</test-file>
+      <test-names>
+        <name value="FamilyFacadeSpec" />
+      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="FamilyTreeCommandInterfaceSpec" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
@@ -147,29 +135,13 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="FamilyTreeCommandInterfaceSpec.shouldReturnNoneWhileNotASingleItemExists" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <ui>mocha-typescript</ui>
-      <extra-mocha-options>--require ts-node/register</extra-mocha-options>
-      <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/test/CommandInterface/FamilyTreeCommandInterface.spec.ts</test-file>
-      <test-names>
-        <name value="FamilyTreeCommandInterfaceSpec" />
-        <name value="shouldReturnNoneWhileNotASingleItemExists" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Mocha.FamilyFacadeSpec" />
         <item itemvalue="Mocha.FamilyTreeCommandInterfaceSpec" />
         <item itemvalue="Mocha.FamilyTreeCommandInterfaceSpec.shouldReturnAllSisterInLaws" />
         <item itemvalue="Mocha.FamilyTreeCommandInterfaceSpec.shouldAbleToAddChild" />
         <item itemvalue="npm.compile" />
-        <item itemvalue="Mocha.FamilyTreeCommandInterfaceSpec.shouldReturnNoneWhileNotASingleItemExists" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +168,7 @@
       <workItem from="1586155190831" duration="5746000" />
       <workItem from="1586183735448" duration="6840000" />
       <workItem from="1586249263530" duration="2917000" />
-      <workItem from="1586271990423" duration="7518000" />
+      <workItem from="1586271990423" duration="8808000" />
     </task>
     <task id="LOCAL-00001" summary="#001 | Sourav | Added git ignore file.">
       <created>1585995713572</created>
@@ -380,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586272749446</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="#020 | Sourav | Refactored almost every thing because of feedback.">
+      <created>1586282848875</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1586282848875</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +397,8 @@
     <MESSAGE value="#017 | Sourav | Updated sister-in-law relation." />
     <MESSAGE value="#018 | Sourav | Improved test cases." />
     <MESSAGE value="#019 | Sourav | Added gulp file." />
-    <option name="LAST_COMMIT_MESSAGE" value="#019 | Sourav | Added gulp file." />
+    <MESSAGE value="#020 | Sourav | Refactored almost every thing because of feedback." />
+    <option name="LAST_COMMIT_MESSAGE" value="#020 | Sourav | Refactored almost every thing because of feedback." />
   </component>
   <component name="WindowStateProjectService">
     <state x="608" y="205" width="764" height="704" key="#FamilyFacadeSpec" timestamp="1586083737617">
@@ -441,82 +421,82 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="728" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586279506615" />
-    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2" timestamp="1586272749325">
+    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2" timestamp="1586282848511">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586272749325" />
+    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586282848511" />
     <state width="1106" height="506" key="DebuggerActiveHint" timestamp="1586282451080">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1106" height="506" key="DebuggerActiveHint/70.27.1850.1053@70.27.1850.1053" timestamp="1586282451080" />
-    <state x="240" y="124" width="1480" height="879" key="DiffContextDialog" timestamp="1586272605198">
+    <state x="240" y="124" width="1480" height="879" key="DiffContextDialog" timestamp="1586282782525">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="240" y="124" width="1480" height="879" key="DiffContextDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586272605198" />
-    <state width="1827" height="92" key="GridCell.Tab.0.bottom" timestamp="1586282429407">
+    <state x="240" y="124" width="1480" height="879" key="DiffContextDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586282782525" />
+    <state width="1827" height="414" key="GridCell.Tab.0.bottom" timestamp="1586282851637">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="92" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586282429407" />
-    <state width="1827" height="92" key="GridCell.Tab.0.center" timestamp="1586282429403">
+    <state width="1827" height="414" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586282851637" />
+    <state width="1827" height="414" key="GridCell.Tab.0.center" timestamp="1586282851636">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="92" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586282429403" />
-    <state width="1827" height="92" key="GridCell.Tab.0.left" timestamp="1586282429402">
+    <state width="1827" height="414" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586282851636" />
+    <state width="1827" height="414" key="GridCell.Tab.0.left" timestamp="1586282851636">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="92" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586282429402" />
-    <state width="1827" height="92" key="GridCell.Tab.0.right" timestamp="1586282429405">
+    <state width="1827" height="414" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586282851636" />
+    <state width="1827" height="414" key="GridCell.Tab.0.right" timestamp="1586282851637">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="92" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586282429405" />
-    <state width="1827" height="163" key="GridCell.Tab.1.bottom" timestamp="1586282435478">
+    <state width="1827" height="414" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586282851637" />
+    <state width="1827" height="264" key="GridCell.Tab.1.bottom" timestamp="1586282683506">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="163" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586282435478" />
-    <state width="1827" height="163" key="GridCell.Tab.1.center" timestamp="1586282435477">
+    <state width="1827" height="264" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586282683506" />
+    <state width="1827" height="264" key="GridCell.Tab.1.center" timestamp="1586282683496">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="163" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586282435477" />
-    <state width="1827" height="163" key="GridCell.Tab.1.left" timestamp="1586282435477">
+    <state width="1827" height="264" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586282683496" />
+    <state width="1827" height="264" key="GridCell.Tab.1.left" timestamp="1586282683495">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="163" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586282435477" />
-    <state width="1827" height="163" key="GridCell.Tab.1.right" timestamp="1586282435478">
+    <state width="1827" height="264" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586282683495" />
+    <state width="1827" height="264" key="GridCell.Tab.1.right" timestamp="1586282683496">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="163" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586282435478" />
-    <state width="1827" height="92" key="GridCell.Tab.2.bottom" timestamp="1586282429256">
+    <state width="1827" height="264" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586282683496" />
+    <state width="1827" height="264" key="GridCell.Tab.2.bottom" timestamp="1586282683509">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="92" key="GridCell.Tab.2.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586282429256" />
-    <state width="1827" height="92" key="GridCell.Tab.2.center" timestamp="1586282429256">
+    <state width="1827" height="264" key="GridCell.Tab.2.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586282683509" />
+    <state width="1827" height="264" key="GridCell.Tab.2.center" timestamp="1586282683508">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="92" key="GridCell.Tab.2.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586282429256" />
-    <state width="1827" height="92" key="GridCell.Tab.2.left" timestamp="1586282429255">
+    <state width="1827" height="264" key="GridCell.Tab.2.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586282683508" />
+    <state width="1827" height="264" key="GridCell.Tab.2.left" timestamp="1586282683507">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="92" key="GridCell.Tab.2.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586282429255" />
-    <state width="1827" height="92" key="GridCell.Tab.2.right" timestamp="1586282429256">
+    <state width="1827" height="264" key="GridCell.Tab.2.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586282683507" />
+    <state width="1827" height="264" key="GridCell.Tab.2.right" timestamp="1586282683508">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="92" key="GridCell.Tab.2.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586282429256" />
-    <state width="1827" height="92" key="GridCell.Tab.3.bottom" timestamp="1586282429257">
+    <state width="1827" height="264" key="GridCell.Tab.2.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586282683508" />
+    <state width="1827" height="264" key="GridCell.Tab.3.bottom" timestamp="1586282683511">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="92" key="GridCell.Tab.3.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586282429257" />
-    <state width="1827" height="92" key="GridCell.Tab.3.center" timestamp="1586282429256">
+    <state width="1827" height="264" key="GridCell.Tab.3.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586282683511" />
+    <state width="1827" height="264" key="GridCell.Tab.3.center" timestamp="1586282683510">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="92" key="GridCell.Tab.3.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586282429256" />
-    <state width="1827" height="92" key="GridCell.Tab.3.left" timestamp="1586282429256">
+    <state width="1827" height="264" key="GridCell.Tab.3.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586282683510" />
+    <state width="1827" height="264" key="GridCell.Tab.3.left" timestamp="1586282683509">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="92" key="GridCell.Tab.3.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586282429256" />
-    <state width="1827" height="92" key="GridCell.Tab.3.right" timestamp="1586282429256">
+    <state width="1827" height="264" key="GridCell.Tab.3.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586282683509" />
+    <state width="1827" height="264" key="GridCell.Tab.3.right" timestamp="1586282683510">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="92" key="GridCell.Tab.3.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586282429256" />
+    <state width="1827" height="264" key="GridCell.Tab.3.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586282683510" />
     <state x="731" y="256" width="517" height="602" key="RollbackChangesDialog" timestamp="1585995087236">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -529,10 +509,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="474" y="146" width="1031" height="822" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1585898360639" />
-    <state x="643" y="292" width="863" height="590" key="find.popup" timestamp="1586281394959">
+    <state x="643" y="292" width="863" height="590" key="find.popup" timestamp="1586285009652">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="643" y="292" width="863" height="590" key="find.popup/70.27.1850.1053@70.27.1850.1053" timestamp="1586281394959" />
+    <state x="643" y="292" width="863" height="590" key="find.popup/70.27.1850.1053@70.27.1850.1053" timestamp="1586285009652" />
     <state x="774" y="326" width="432" height="462" key="refactoring.ChangeSignatureDialog" timestamp="1586278550569">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -541,9 +521,9 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="659" y="252" key="run.anything.popup/70.27.1850.1053@70.27.1850.1053" timestamp="1586187292837" />
-    <state x="658" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1586281401079">
+    <state x="658" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1586285014451">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="658" y="259" width="672" height="678" key="search.everywhere.popup/70.27.1850.1053@70.27.1850.1053" timestamp="1586281401079" />
+    <state x="658" y="259" width="672" height="678" key="search.everywhere.popup/70.27.1850.1053@70.27.1850.1053" timestamp="1586285014451" />
   </component>
 </project>
