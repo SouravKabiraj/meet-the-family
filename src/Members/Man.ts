@@ -1,7 +1,7 @@
 import {Gender, Human, IMan, IParent, Woman} from "../internal";
 
 export class Man extends Human implements IMan, IParent {
-    protected _partner: Woman;
+    private _partner: Woman;
 
     constructor(fullName: string, dateOfBirth: Date, mother: Woman, father: Man) {
         super(fullName, Gender.MALE, dateOfBirth, mother, father);

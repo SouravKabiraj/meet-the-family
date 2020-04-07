@@ -4,8 +4,8 @@ export abstract class Human implements IHuman {
     private readonly _gender: Gender;
     private readonly _dateOfBirth: Date;
     private readonly _fullName: string;
-    private _father: Man;
-    private _mother: Woman;
+    private readonly _father: Man;
+    private readonly _mother: Woman;
 
     protected constructor(fullName: string, gender: Gender, dateOfBirth: Date, mother: Woman, father: Man) {
         this._fullName = fullName;
