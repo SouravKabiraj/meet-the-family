@@ -1,37 +1,39 @@
 import {IRelation} from "./IRelation";
 import {SiblingsRelation} from "./SiblingsRelation";
-import {Father, Gender, Human, Man, MarriedMan, MarriedWoman, Mother, Woman} from "../internal";
+import {Human, Man, Woman} from "../internal";
 
 export abstract class ISiblingInLawRelation implements IRelation {
     protected constructor(private siblings: SiblingsRelation) {
     }
 
-    getPartnerSiblings(married: Human): Human[] {
+    getPartnerSiblings(human: Human): Human[] {
         let partner;
-        switch (married.constructor.name) {
-            case MarriedMan.name:
-                partner = (<MarriedMan>married).getPartner();
+        switch (human.constructor.name) {
+            case Man.name:
+                partner = (<Man>human).getWife();
                 break;
-            case MarriedWoman.name:
-                partner = (<MarriedWoman>married).getPartner();
-                break;
-            case Father.name:
-                partner = (<Father>married).getPartner();
-                break;
-            case Mother.name:
-                partner = (<Mother>married).getPartner();
+            case Woman.name:
+                partner = (<Woman>human).getHusband();
                 break;
         }
-        return this.siblings.getRelativesOf(partner);
+        if (partner) {
+            return this.siblings.getRelativesOf(partner);
+        } else {
+            return [];
+        }
     }
 
     getRelativesOf(human): Human[] {
-        const sisterInLaws = [];
-        if (human.constructor.name !== Man.name && human.constructor.name !== Woman.name) {
-            sisterInLaws.push(...this.getPartnerSiblings(human));
-        }
+        const inLaws = [];
+        inLaws.push(...this.getPartnerSiblings(human));
         const siblings = this.siblings.getRelativesOf(human);
-        sisterInLaws.push(...siblings.map((s: any) => s.getPartner()));
-        return sisterInLaws;
+        siblings.forEach(s => {
+            if (s.constructor.name === Man.name) {
+                inLaws.push((<Man>s).getWife());
+            } else {
+                inLaws.push((<Woman>s).getHusband());
+            }
+        })
+        return inLaws;
     }
 }

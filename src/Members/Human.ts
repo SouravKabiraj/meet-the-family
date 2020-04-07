@@ -1,74 +1,32 @@
-import {Father, Gender, IHuman, MarriedMan, Mother} from "../internal";
+import {Gender, IHuman, Man, Woman} from "../internal";
 
 export abstract class Human implements IHuman {
     private readonly _gender: Gender;
     private readonly _dateOfBirth: Date;
-    private _fullName: string;
-    private _father: Father;
-    private _mother: Mother;
-    protected _partner: Human;
+    private readonly _fullName: string;
+    private _father: Man;
+    private _mother: Woman;
 
-    protected constructor(fullName: string, gender: Gender, dateOfBirth: Date, mother: Mother, father: Father, partner: Human) {
+    protected constructor(fullName: string, gender: Gender, dateOfBirth: Date, mother: Woman, father: Man) {
         this._fullName = fullName;
         this._gender = gender;
         this._dateOfBirth = dateOfBirth;
         this._mother = mother;
         this._father = father;
-        this._partner = partner;
-    }
-
-    get gender(): Gender {
-        return this._gender;
     }
 
     getFullName(): string {
         return this._fullName;
     }
 
-    getFather(): Father {
+    getFather(): Man {
         return this._father;
     }
 
-    getMother(): Mother {
+    getMother(): Woman {
         return this._mother;
     }
 
-    setFather(father: Father): void {
-        this._father = father;
-    }
-
-    setMother(mother: Mother): void {
-        this._mother = mother;
-    }
-
-    toString(): string {
-        return `[
-    name: ${this.getFullName()},
-    Gender : ${this.gender === Gender.MALE ? 'MALE' : 'FEMALE'}
-]`
-    }
-
-    setName(fullName: string) {
-        this._fullName = fullName;
-    }
-
-    getDateOfBirth(): Date {
-        return this._dateOfBirth;
-    }
-
-    setPartner(partner: Human): void {
-        this._partner = partner;
-    }
-
-    updateMotherRef() {
-        try {
-            const oldSelfRef = this.getMother().getChildren().find(child => child.getFullName() === this.getFullName());
-            const selfIndex = this.getMother().getChildren().indexOf(oldSelfRef);
-            this.getMother().getChildren()[selfIndex] = this;
-        } catch (e) {
-        }
-    }
-
-    abstract beMarried();
+    abstract marry(partner: Human): void;
 }
 

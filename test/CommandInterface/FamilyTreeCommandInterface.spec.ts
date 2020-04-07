@@ -14,11 +14,12 @@ import {FamilyCommand} from "../../src/Command/FamilyCommand";
 import {Gender, Man} from "../../src/internal";
 import {expect} from 'chai';
 import {RelationshipCommand} from "../../src/Command/RelationshipCommand";
+import {FamilyFacade} from "../../src/Facade/FamilyFacade";
 
 @suite
 class FamilyTreeCommandInterfaceSpec {
     private targetObject: FamilyTreeCommandInterface;
-    private familyFacade;
+    private familyFacade: FamilyFacade;
     private siblingsRelation = new SiblingsRelation();
     private daughterRelation = new DaughterRelation();
     private sonRelation = new SonRelation();
@@ -38,10 +39,10 @@ class FamilyTreeCommandInterfaceSpec {
     private shouldAbleToAddChild(): void {
         const returnedValue = this.targetObject.Execute(FamilyCommand.ADD_CHILD, 'Satya', 'Test1', Gender.MALE);
 
-        const searchedMember: Man = this.familyFacade.search('Test1');
+        const searchedMember = this.familyFacade.search('Test1');
         expect(searchedMember.getFullName()).to.equal('Test1');
+        expect(searchedMember.constructor.name).to.equal(Man.name);
         expect(searchedMember.getMother().getFullName()).to.equal('Satya');
-        expect(searchedMember.gender).to.equal(Gender.MALE);
         expect(returnedValue).to.equal('CHILD_ADDITION_SUCCEEDED');
     }
 

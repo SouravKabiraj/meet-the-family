@@ -8,13 +8,13 @@ import {PaternalAuntRelation} from "../RelationshipHandlers/PaternalAuntRelation
 import {PaternalUncleRelation} from "../RelationshipHandlers/PaternalUncleRelation";
 import {SiblingsRelation} from "../RelationshipHandlers/SiblingsRelation";
 import {SisterInLawRelation} from "../RelationshipHandlers/SisterInLawRelation";
-import {Father} from "../Members/Father";
 import {SonRelation} from "../RelationshipHandlers/SonRelation";
 import {DaughterRelation} from "../RelationshipHandlers/DaughterRelation";
 import {EntityNotFound} from "../Error/EntityNotFound";
 import {InValidActionError} from "../Error/InValidActionError";
 import {FamilyCommand} from "../Command/FamilyCommand";
 import {RelationshipCommand} from "../Command/RelationshipCommand";
+import {Man} from "../internal";
 
 export class FamilyTreeCommandInterface extends CommandInterface {
     constructor(private familyFacade: FamilyFacade,
@@ -54,7 +54,7 @@ export class FamilyTreeCommandInterface extends CommandInterface {
                                 .toString();
                             break;
                         case RelationshipCommand.Daughter:
-                            result = this.daughterRelation.getRelativesOf(<Father>searchedMember)
+                            result = this.daughterRelation.getRelativesOf(<Man>searchedMember)
                                 .map(r => r.getFullName())
                                 .toString();
                             break;

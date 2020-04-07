@@ -1,14 +1,9 @@
-export {IMarrried} from "./Members/IMarrried";
 export {Gender} from "./Members/Gender";
 export {IHuman} from "./Members/IHuman";
 export {Human} from "./Members/Human";
 export {IMan} from "./Members/IMan";
+export {IWoman} from "./Members/IWoman";
 export {Man} from "./Members/Man";
 export {Woman} from "./Members/Woman";
-export {IMarriedMan} from "./Members/IMarriedMan";
-export {IMarriedWoman} from "./Members/IMarriedWoman";
-export {MarriedWoman} from "./Members/MarriedWoman";
-export {MarriedMan} from "./Members/MarriedMan";
 export {IParent} from "./Members/IParent";
-export {Father} from "./Members/Father";
-export {Mother} from "./Members/Mother";
+

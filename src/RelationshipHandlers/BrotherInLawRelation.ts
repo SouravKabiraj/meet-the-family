@@ -1,5 +1,5 @@
 import {ISiblingInLawRelation} from "./ISiblingInLawRelation";
-import {Gender, Human, IMarrried} from "../internal";
+import {Human, Man} from "../internal";
 import {SiblingsRelation} from "./SiblingsRelation";
 
 export class BrotherInLawRelation extends ISiblingInLawRelation {
@@ -9,6 +9,6 @@ export class BrotherInLawRelation extends ISiblingInLawRelation {
 
     getRelativesOf(human): Human[];
     getRelativesOf(human: Human): Human[] {
-        return super.getRelativesOf(human).filter(h => (h.gender === Gender.MALE));
+        return super.getRelativesOf(human).filter(h => (h.constructor.name === Man.name));
     }
 }

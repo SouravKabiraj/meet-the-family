@@ -1,4 +1,4 @@
-import {Father, Gender, Human, Man, MarriedMan, MarriedWoman, Mother} from "../internal";
+import {Gender, Human, Man, Woman} from "../internal";
 import {ManBuilder} from "../Builders/ManBuilder";
 import {WomanBuilder} from "../Builders/WomanBuilder";
 import {EntityNotFound} from "../Error/EntityNotFound";
@@ -28,32 +28,28 @@ export class FamilyFacade {
     }
 
     public getGenderOf(name: string): Gender {
-        return this.search(name).gender;
+        return this.search(name).constructor.name === Man.name ? Gender.MALE : Gender.FEMALE;
     }
 
     public organizeMarriage(familyMemberName: string, newMember: Human): void {
         const familyMember = this.search(familyMemberName);
-        let newCouple: { husband: MarriedMan, wife: MarriedWoman };
         if (newMember.constructor.name === Man.name) {
-            newCouple = (<Man>newMember).marry(familyMember);
+            (<Man>newMember).marry(<Woman>familyMember);
         } else {
-            newCouple = (<Man>familyMember).marry(newMember);
+            (<Man>familyMember).marry(<Woman>newMember);
         }
-        this.members.set(newCouple.husband.getFullName(), newCouple.husband);
-        this.members.set(newCouple.wife.getFullName(), newCouple.wife);
+        this.members.set(newMember.getFullName(), newMember);
     }
 
     // Add Child but with better name ;)
     public namingCeremony(mothersName: string, newBornName: string, gender: Gender): void {
-        const newBorn = gender === Gender.MALE ?
-            ManBuilder.withDefault().withName(newBornName).build() :
-            WomanBuilder.withDefault().withName(newBornName).build();
-        const familyMember = <MarriedWoman>this.search(mothersName);
+        const mother = <Woman>this.search(mothersName);
         try {
-            const giveBirthResponse: { father: Father, mother: Mother, child: Human } = familyMember.giveBirth(newBorn);
-            this.members.set(giveBirthResponse.child.getFullName(), giveBirthResponse.child);
-            this.members.set(giveBirthResponse.mother.getFullName(), giveBirthResponse.mother);
-            this.members.set(giveBirthResponse.father.getFullName(), giveBirthResponse.father);
+            const newBorn = gender === Gender.MALE ?
+                ManBuilder.withDefault().withName(newBornName).withMother(mother).withFather(mother.getHusband()).build() :
+                WomanBuilder.withDefault().withName(newBornName).withMother(mother).withFather(mother.getHusband()).build()
+            mother.giveBirth(newBorn);
+            this.members.set(newBorn.getFullName(), newBorn);
         } catch (e) {
             throw new InValidActionError();
         }
