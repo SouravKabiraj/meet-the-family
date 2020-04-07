@@ -11,12 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c89349c4-f886-49f3-9407-fb170a69d52a" name="Default Changelist" comment="#019 | Sourav | Added gulp file.">
-      <change afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tslint.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Input/Input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Input/Input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/meet-the-family.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/meet-the-family.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +169,7 @@
       <workItem from="1586155190831" duration="5746000" />
       <workItem from="1586183735448" duration="6840000" />
       <workItem from="1586249263530" duration="2917000" />
-      <workItem from="1586271990423" duration="653000" />
+      <workItem from="1586271990423" duration="752000" />
     </task>
     <task id="LOCAL-00001" summary="#001 | Sourav | Added git ignore file.">
       <created>1585995713572</created>
@@ -343,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586188988146</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="#019 | Sourav | Added gulp file.">
+      <created>1586272663617</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1586272663617</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,10 +407,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="728" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1585916833502" />
-    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2" timestamp="1586272635364">
+    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2" timestamp="1586272702925">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586272635364" />
+    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586272702925" />
     <state width="1106" height="506" key="DebuggerActiveHint" timestamp="1586187165214">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
