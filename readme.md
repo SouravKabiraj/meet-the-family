@@ -16,3 +16,5 @@
 <li> Output: Open Output/Output.txt
 </li>
 </ol>
+
+<i>This application is developed in node version v10.16.3</i>
