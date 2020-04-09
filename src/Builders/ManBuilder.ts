@@ -6,9 +6,6 @@ export class ManBuilder {
     private mother: Woman;
     private father: Man;
 
-    constructor() {
-    }
-
     public static withDefault(): ManBuilder {
         return new ManBuilder()
             .withName(`New Born #${new Date()}`)

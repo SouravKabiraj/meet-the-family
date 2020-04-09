@@ -61,7 +61,7 @@ export class LengaburuEmperorFamilyFacadeBuilder {
         } else {
             newMember = ManBuilder.withDefault().withName(newMemberName).build();
         }
-        this.familyFacade.organizeMarriage(familyMemberName, newMember)
+        this.familyFacade.organizeMarriage(familyMemberName, newMember);
         return this;
     }
 

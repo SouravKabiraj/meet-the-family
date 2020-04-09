@@ -33,7 +33,7 @@ export abstract class ISiblingInLawRelation implements IRelation {
             } else {
                 inLaws.push((<Woman>s).getHusband());
             }
-        })
+        });
         return inLaws;
     }
 }

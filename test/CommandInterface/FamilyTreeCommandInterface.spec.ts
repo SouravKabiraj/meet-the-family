@@ -32,12 +32,16 @@ class FamilyTreeCommandInterfaceSpec {
 
     constructor() {
         this.familyFacade = LengaburuEmperorFamilyFacadeBuilder.withInitialData().build();
-        this.targetObject = new FamilyTreeCommandInterface(this.familyFacade, this.brotherInLawRelation, this.maternalAuntRelation, this.maternalUncleRelation, this.paternalAuntRelation, this.paternalUncleRelation, this.siblingsRelation, this.sisterInLawRelation, this.sonRelation, this.daughterRelation);
+        this.targetObject = new FamilyTreeCommandInterface(this.familyFacade, this.brotherInLawRelation,
+            this.maternalAuntRelation, this.maternalUncleRelation, this.paternalAuntRelation,
+            this.paternalUncleRelation, this.siblingsRelation, this.sisterInLawRelation, this.sonRelation,
+            this.daughterRelation);
     }
 
     @test
     private shouldAbleToAddChild(): void {
-        const returnedValue = this.targetObject.Execute(FamilyCommand.ADD_CHILD, 'Satya', 'Test1', Gender.MALE);
+        const addChild = FamilyCommand.ADD_CHILD;
+        const returnedValue = this.targetObject.Execute(addChild, 'Satya', 'Test1', Gender.MALE);
 
         const searchedMember = this.familyFacade.search('Test1');
         expect(searchedMember.getFullName()).to.equal('Test1');
@@ -48,91 +52,116 @@ class FamilyTreeCommandInterfaceSpec {
 
     @test
     private shouldThrowErrorWhileWrongMothersNameEntered(): void {
-        const returnedValue = this.targetObject.Execute(FamilyCommand.ADD_CHILD, 'shdkfhsdk', 'Test1', Gender.MALE);
+        const addChild = FamilyCommand.ADD_CHILD;
+        const returnedValue = this.targetObject.Execute(addChild, 'shdkfhsdk', 'Test1', Gender.MALE);
 
         expect(returnedValue).to.equal('PERSON_NOT_FOUND');
     }
 
     @test
     private shouldReturnSonsNames(): void {
-        const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'King Shan', RelationshipCommand.Son);
+        const relationShipCommand = RelationshipCommand.Son;
+        const getRelationship = FamilyCommand.GET_RELATIONSHIP;
+        const returnedValue = this.targetObject.Execute(getRelationship, 'King Shan', relationShipCommand);
 
         expect(returnedValue).to.equal('Chit,Ish,Vich,Aras');
     }
 
     @test
     private shouldReturnDaughterNames(): void {
-        const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'King Shan', RelationshipCommand.Daughter);
+        const getRelationship = FamilyCommand.GET_RELATIONSHIP;
+        const daughter = RelationshipCommand.Daughter;
+        const returnedValue = this.targetObject.Execute(getRelationship, 'King Shan', daughter);
 
         expect(returnedValue).to.equal('Satya');
     }
 
     @test
     private shouldReturnAllSisterInLaws(): void {
-        const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'Atya', RelationshipCommand.SisterInLaw);
+        const getRelationship = FamilyCommand.GET_RELATIONSHIP;
+        const sisterInLaw = RelationshipCommand.SisterInLaw;
+        const returnedValue = this.targetObject.Execute(getRelationship, 'Atya', sisterInLaw);
 
         expect(returnedValue).to.equal('Satvy,Krpi');
     }
 
     @test
     private shouldReturnSiblingsNames(): void {
-        const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'Satya', RelationshipCommand.Siblings);
+        const getRelationship = FamilyCommand.GET_RELATIONSHIP;
+        const siblings = RelationshipCommand.Siblings;
+        const returnedValue = this.targetObject.Execute(getRelationship, 'Satya', siblings);
 
         expect(returnedValue).to.equal('Chit,Ish,Vich,Aras');
     }
 
     @test
     private shouldAllVasasSiblings(): void {
-        const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'Vasa', RelationshipCommand.Siblings);
+        const getRelationship = FamilyCommand.GET_RELATIONSHIP;
+        const siblings = RelationshipCommand.Siblings;
+        const returnedValue = this.targetObject.Execute(getRelationship, 'Vasa', siblings);
 
         expect(returnedValue).to.equal('NONE');
     }
 
     @test
     private shouldReturnAllSisterInLawNames(): void {
-        const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'Amba', RelationshipCommand.SisterInLaw);
+        const getRelationship = FamilyCommand.GET_RELATIONSHIP;
+        const sisterInLaw = RelationshipCommand.SisterInLaw;
+        const returnedValue = this.targetObject.Execute(getRelationship, 'Amba', sisterInLaw);
 
         expect(returnedValue).to.equal('Satya');
     }
 
     @test
     private shouldReturnAllBrotherInLawNames(): void {
-        const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'Amba', RelationshipCommand.BrotherInLaw);
+        const getRelationship = FamilyCommand.GET_RELATIONSHIP;
+        const brotherInLaw = RelationshipCommand.BrotherInLaw;
+        const returnedValue = this.targetObject.Execute(getRelationship, 'Amba', brotherInLaw);
 
         expect(returnedValue).to.equal('Ish,Vich,Aras');
     }
 
     @test
     private shouldReturnMaternalAuntNames(): void {
-        const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'Yodhan', RelationshipCommand.MaternalAunt);
+        const getRelationship = FamilyCommand.GET_RELATIONSHIP;
+        const maternalAunt = RelationshipCommand.MaternalAunt;
+        const returnedValue = this.targetObject.Execute(getRelationship, 'Yodhan', maternalAunt);
 
         expect(returnedValue).to.equal('Tritha');
     }
 
     @test
     private shouldReturnMaternalUnclesNames(): void {
-        const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'Yodhan', RelationshipCommand.MaternalUncle);
+        const getRelationship = FamilyCommand.GET_RELATIONSHIP;
+        const maternalUncle = RelationshipCommand.MaternalUncle;
+        const returnedValue = this.targetObject.Execute(getRelationship, 'Yodhan', maternalUncle);
 
         expect(returnedValue).to.equal('Vritha');
     }
 
     @test
     private shouldReturnPaternalAuntsNames(): void {
-        const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'Vasa', RelationshipCommand.PaternalAunt);
+        const getRelationship = FamilyCommand.GET_RELATIONSHIP;
+        const paternalAunt = RelationshipCommand.PaternalAunt;
+        const returnedValue = this.targetObject.Execute(getRelationship, 'Vasa', paternalAunt);
 
         expect(returnedValue).to.equal('Atya');
     }
 
     @test
     private shouldReturnPaternalUnclesNames(): void {
-        const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'Vasa', RelationshipCommand.PaternalUncle);
+        const getRelationship = FamilyCommand.GET_RELATIONSHIP;
+        const paternalUncle = RelationshipCommand.PaternalUncle;
+        const returnedValue = this.targetObject.Execute(getRelationship, 'Vasa', paternalUncle);
 
         expect(returnedValue).to.equal('Vyas');
     }
 
     @test
     private shouldThrowError(): void {
-        const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'Vjkesfhkjasa', RelationshipCommand.PaternalUncle);
+        const getRelationship = FamilyCommand.GET_RELATIONSHIP;
+        const paternalUncle = RelationshipCommand.PaternalUncle;
+        const returnedValue = this.targetObject.Execute(getRelationship, 'Vjkesfhkjasa', paternalUncle);
 
         expect(returnedValue).to.equal('PERSON_NOT_FOUND');
     }
@@ -146,21 +175,26 @@ class FamilyTreeCommandInterfaceSpec {
 
     @test
     private shouldThrowPersonNotFoundError(): void {
-        const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'Pjali', RelationshipCommand.Son);
+        const getRelationship = FamilyCommand.GET_RELATIONSHIP;
+        const son = RelationshipCommand.Son;
+        const returnedValue = this.targetObject.Execute(getRelationship, 'Pjali', son);
 
         expect(returnedValue).to.equal('PERSON_NOT_FOUND');
     }
 
     @test
     private shouldThrowAddChildFailedError(): void {
-        const returnedValue = this.targetObject.Execute(FamilyCommand.ADD_CHILD, 'Asva', 'Vani', Gender.FEMALE);
+        const addChild = FamilyCommand.ADD_CHILD;
+        const returnedValue = this.targetObject.Execute(addChild, 'Asva', 'Vani', Gender.FEMALE);
 
         expect(returnedValue).to.equal('CHILD_ADDITION_FAILED');
     }
 
     @test
     private shouldReturnNoneWhileNotASingleItemExists(): void {
-        const returnedValue = this.targetObject.Execute(FamilyCommand.GET_RELATIONSHIP, 'Vasa', RelationshipCommand.Siblings);
+        const getRelationship = FamilyCommand.GET_RELATIONSHIP;
+        const siblings = RelationshipCommand.Siblings;
+        const returnedValue = this.targetObject.Execute(getRelationship, 'Vasa', siblings);
 
         expect(returnedValue).to.equal('NONE');
     }

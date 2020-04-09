@@ -22,7 +22,7 @@ export class FamilyFacade {
     public search(name: string): Human {
         const searchedPerson = this.members.get(name);
         if (!searchedPerson) {
-            throw new EntityNotFound()
+            throw new EntityNotFound();
         }
         return searchedPerson;
     }
@@ -47,7 +47,7 @@ export class FamilyFacade {
         try {
             const newBorn = gender === Gender.MALE ?
                 ManBuilder.withDefault().withName(newBornName).withMother(mother).withFather(mother.getHusband()).build() :
-                WomanBuilder.withDefault().withName(newBornName).withMother(mother).withFather(mother.getHusband()).build()
+                WomanBuilder.withDefault().withName(newBornName).withMother(mother).withFather(mother.getHusband()).build();
             mother.giveBirth(newBorn);
             this.members.set(newBorn.getFullName(), newBorn);
         } catch (e) {

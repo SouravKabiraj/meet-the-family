@@ -10,7 +10,7 @@ export class MaternalUncleRelation implements IRelation {
 
     getRelativesOf(human: Human): Human[] {
         const mother = human.getMother();
-        const MothersSiblings = this.siblings.getRelativesOf(mother);
-        return MothersSiblings.filter(h => h.constructor.name === Man.name);
+        const mothersSiblings = this.siblings.getRelativesOf(mother);
+        return mothersSiblings.filter(h => h.constructor.name === Man.name);
     }
 }

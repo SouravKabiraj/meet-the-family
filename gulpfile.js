@@ -10,11 +10,11 @@ const clean = function () {
 
 };
 const install = function (done) {
-    run('npm prune').exec(err => {
+    run('npm prune --silent').exec(err => {
         if (err) {
             console.log(err);
         }
-        run('npm install').exec(err => {
+        run('npm install --silent').exec(err => {
             if (err) {
                 console.log(err);
             }

@@ -24,7 +24,7 @@ class FamilyFacadeSpec {
     @test
     private shouldOrganizeMarriage(): void {
         try {
-            this.targetObject.search('King')
+            this.targetObject.search('King');
         } catch (e) {
             this.targetObject.coronation('King');
         }
