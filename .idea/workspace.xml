@@ -10,21 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c89349c4-f886-49f3-9407-fb170a69d52a" name="Default Changelist" comment="#021 | Sourav | Changed access specifiers.">
+    <list default="true" id="c89349c4-f886-49f3-9407-fb170a69d52a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Builders/ManBuilder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Builders/ManBuilder.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Builders/WomanBuilder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Builders/WomanBuilder.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Facade/FamilyFacade.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Facade/FamilyFacade.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InitialDataSetup/FamilyFacadeBuilder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/InitialDataSetup/FamilyFacadeBuilder.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationshipHandlers/ISiblingInLawRelation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationshipHandlers/ISiblingInLawRelation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationshipHandlers/MaternalAuntRelation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationshipHandlers/MaternalAuntRelation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RelationshipHandlers/MaternalUncleRelation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RelationshipHandlers/MaternalUncleRelation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/CommandInterface/FamilyTreeCommandInterface.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/CommandInterface/FamilyTreeCommandInterface.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Facade/FamilyFacade.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/Facade/FamilyFacade.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/tslint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +170,7 @@
       <workItem from="1586183735448" duration="6840000" />
       <workItem from="1586249263530" duration="2917000" />
       <workItem from="1586271990423" duration="9981000" />
-      <workItem from="1586444787203" duration="2546000" />
+      <workItem from="1586444787203" duration="3150000" />
     </task>
     <task id="LOCAL-00001" summary="#001 | Sourav | Added git ignore file.">
       <created>1585995713572</created>
@@ -386,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586285352326</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="#022 | Sourav | Fixed all tslint errors.">
+      <created>1586447482317</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1586447482317</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,7 +423,8 @@
     <MESSAGE value="#020 | Sourav | Refactored almost every thing because of feedback." />
     <MESSAGE value="#020 | Sourav | Refactored almost every thing because of feedback[2]." />
     <MESSAGE value="#021 | Sourav | Changed access specifiers." />
-    <option name="LAST_COMMIT_MESSAGE" value="#021 | Sourav | Changed access specifiers." />
+    <MESSAGE value="#022 | Sourav | Fixed all tslint errors." />
+    <option name="LAST_COMMIT_MESSAGE" value="#022 | Sourav | Fixed all tslint errors." />
   </component>
   <component name="WindowStateProjectService">
     <state x="608" y="205" width="764" height="704" key="#FamilyFacadeSpec" timestamp="1586083737617">
@@ -450,10 +447,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="728" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586279506615" />
-    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2" timestamp="1586285736217">
+    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2" timestamp="1586447481736">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586285736217" />
+    <state x="754" y="79" width="961" height="878" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586447481736" />
     <state width="1106" height="506" key="DebuggerActiveHint" timestamp="1586282451080">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
